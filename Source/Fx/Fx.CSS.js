@@ -99,7 +99,7 @@ Fx.CSS = new Class({
 				});
 			});
 		});
-		return Fx.CSS.Cache[selector] = to;
+		return (Fx.CSS.Cache[selector] = to);
 	}
 
 });

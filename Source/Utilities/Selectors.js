@@ -57,7 +57,7 @@ Selectors.Utils = {
 	chk: function(item, uniques){
 		if (!uniques) return true;
 		var uid = $uid(item);
-		if (!uniques[uid]) return uniques[uid] = true;
+		if (!uniques[uid]) return (uniques[uid] = true);
 		return false;
 	},
 
@@ -87,7 +87,7 @@ Selectors.Utils = {
 			default: parsed = {a: (a - 1), special: 'index'};
 		}
 
-		return Selectors.Cache.nth[argument] = parsed;
+		return (Selectors.Cache.nth[argument] = parsed);
 	},
 
 	parseSelector: function(selector){
@@ -109,7 +109,7 @@ Selectors.Utils = {
 		if (!parsed.attributes.length) delete parsed.attributes;
 		if (!parsed.pseudos.length) delete parsed.pseudos;
 		if (!parsed.classes && !parsed.attributes && !parsed.pseudos) parsed = null;
-		return Selectors.Cache.parsed[selector] = parsed;
+		return (Selectors.Cache.parsed[selector] = parsed);
 	},
 
 	parseTagAndID: function(selector){
