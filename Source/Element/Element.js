@@ -196,11 +196,15 @@ Document.implement({
 
 })();
 
+var $ = null;
+
 if (window.$ == null) Window.implement({
 	$: function(el, nc){
 		return document.id(el, nc, this.document);
 	}
 });
+
+var $$, getDocument, getWindow;
 
 Window.implement({
 
